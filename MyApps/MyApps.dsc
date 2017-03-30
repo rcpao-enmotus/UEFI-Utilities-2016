@@ -64,6 +64,8 @@
   SortLib|MdeModulePkg/Library/UefiSortLib/UefiSortLib.inf
 
   ShellLib|ShellPkg/Library/UefiShellLib/UefiShellLib.inf
+  ShellCommandLib|ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib.inf
+  HandleParsingLib|ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib.inf
 
   CacheMaintenanceLib|MdePkg/Library/BaseCacheMaintenanceLib/BaseCacheMaintenanceLib.inf
 
@@ -83,4 +85,5 @@
   # MyApps/ShowEK/ShowEK.inf
   # MyApps/tpm_getpermflags/tpm_getpermflags.inf
   # MyApps/tpm_getrandom/tpm_getrandom.inf
-  MyApps/ShowTPM2/ShowTPM2.inf
+  # MyApps/ShowTPM2/ShowTPM2.inf
+  MyApps/ReadDemo1/ReadDemo1.inf
