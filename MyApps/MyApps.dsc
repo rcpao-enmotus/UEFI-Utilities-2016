@@ -72,6 +72,10 @@
 [Components]
 
 #### Applications.
+  # MyApps/HelloWorld/HelloWorld.inf
+  # MyApps/Hello/Hello.inf
+  # MyApps/WriteDemo/WriteDemo.inf
+  # MyApps/ScreenCapture/ScreenCapture.inf
   # MyApps/ShowESRT/ShowESRT.inf
   # MyApps/ShowMSDM/ShowMSDM.inf
   # MyApps/ShowECT/ShowECT.inf
@@ -86,4 +90,12 @@
   # MyApps/tpm_getpermflags/tpm_getpermflags.inf
   # MyApps/tpm_getrandom/tpm_getrandom.inf
   # MyApps/ShowTPM2/ShowTPM2.inf
-  MyApps/ReadDemo1/ReadDemo1.inf
+  # MyApps/ShowOSIndications/ShowOSIndications.inf
+  # MyApps/ShowRNG/ShowRNG.inf
+  # MyApps/CheckSMM/CheckSMM.inf
+  # MyApps/ThinkPwn/ThinkPwn.inf
+  # MyApps/ShowPCR12/ShowPCR12.inf
+  # MyApps/CheckFTP4/CheckFTP4.inf
+  # MyApps/ShowPCR20/ShowPCR20.inf
+  # MyApps/ReadDemo1/ReadDemo1.inf
+  MyApps/ShowPCI/ShowPCI.inf
