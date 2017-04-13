@@ -3,7 +3,7 @@
 //
 //  Show PCI devices
 //
-//  License: BSD license except UDK2015 license applies to code from UDK2015 source, 
+//  License: BSD license except UDK2015 license applies to code from UDK2015 source. 
 //
 
 
