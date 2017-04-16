@@ -98,4 +98,5 @@
   # MyApps/CheckFTP4/CheckFTP4.inf
   # MyApps/ShowPCR20/ShowPCR20.inf
   # MyApps/ReadDemo1/ReadDemo1.inf
-  MyApps/ShowPCI/ShowPCI.inf
+  # MyApps/ShowPCI/ShowPCI.inf
+  MyApps/ShowPCIx/ShowPCIx.inf
