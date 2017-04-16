@@ -3,9 +3,9 @@
 //
 //  Show PCI devices
 //
-//  License: BSD license except UDK2015 license applies to code from UDK2015 source. 
+//  License: UDK2015 license applies to code from UDK2015 source,
+//           BSD 2 cluase license applies to all other code.
 //
-
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
