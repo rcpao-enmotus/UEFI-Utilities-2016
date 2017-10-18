@@ -205,7 +205,8 @@ ShellAppMain(UINTN Argc, CHAR16 **Argv)
     EFI_HANDLE *FileBuffer = NULL;
     BOOLEAN Verbose = FALSE;
     UINTN FileSize;
-    int OrgMode, NewMode = 0, Pixels = 0;
+    //int OrgMode, NewMode = 0, Pixels = 0;
+    int Pixels = 0;
     BOOLEAN LowerHandle = FALSE;
 
 
@@ -296,7 +297,7 @@ ShellAppMain(UINTN Argc, CHAR16 **Argv)
     }
 
     // Figure out maximum resolution and use it
-    OrgMode = Gop->Mode->Mode;
+    //OrgMode = Gop->Mode->Mode;
     for (int i = 0; i < Gop->Mode->MaxMode; i++) {
          EFI_GRAPHICS_OUTPUT_MODE_INFORMATION *Info;
          UINTN SizeOfInfo;
@@ -311,22 +312,26 @@ ShellAppMain(UINTN Argc, CHAR16 **Argv)
          }
          if (Info->PixelsPerScanLine > Pixels) {
               Pixels = Info->PixelsPerScanLine;
-              NewMode = i;
+              //NewMode = i;
          }
     }
    
+#if 0
     // change screen mode 
     Status = Gop->SetMode(Gop, NewMode);
     if (EFI_ERROR (Status)) { 
         Print(L"ERROR: SetMode [%d]\n, Status");
         goto cleanup;
     }
+#endif
         
     DisplayImage(Gop, FileBuffer);
 
+#if 0
     // reset screen to original mode
     PressKey(FALSE);
     Status = Gop->SetMode(Gop, OrgMode);
+#endif
 
 
 cleanup:
