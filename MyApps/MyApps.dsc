@@ -81,7 +81,7 @@
   # MyApps/ShowECT/ShowECT.inf
   # MyApps/ShowBGRT/ShowBGRT.inf
   # MyApps/ScreenModes/ScreenModes.inf
-  # MyApps/DisplayBMP/DisplayBMP.inf
+  MyApps/DisplayBMP/DisplayBMP.inf
   # MyApps/ShowEDID/ShowEDID.inf
   # MyApps/ShowTrEE/ShowTrEE.inf
   # MyApps/ShowTrEELog/ShowTrEELog.inf
@@ -99,4 +99,4 @@
   # MyApps/ShowPCR20/ShowPCR20.inf
   # MyApps/ReadDemo1/ReadDemo1.inf
   # MyApps/ShowPCI/ShowPCI.inf
-  MyApps/ShowPCIx/ShowPCIx.inf
+  #MyApps/ShowPCIx/ShowPCIx.inf

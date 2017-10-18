@@ -47,7 +47,7 @@ PressKey(BOOLEAN DisplayText)
 {
 
     EFI_INPUT_KEY Key;
-    EFI_STATUS    Status;
+    /* EFI_STATUS    Status; */
     UINTN         EventIndex;
 
     if (DisplayText) {
@@ -55,7 +55,7 @@ PressKey(BOOLEAN DisplayText)
     }
 
     gBS->WaitForEvent (1, &gST->ConIn->WaitForKey, &EventIndex);
-    Status = gST->ConIn->ReadKeyStroke (gST->ConIn, &Key);
+    /* Status = */ gST->ConIn->ReadKeyStroke (gST->ConIn, &Key);
 }
 
 
