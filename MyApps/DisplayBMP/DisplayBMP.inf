@@ -9,6 +9,7 @@
 
 [Sources]
   DisplayBMP.c
+  Image.c
 
 [Packages]
   MdePkg/MdePkg.dec

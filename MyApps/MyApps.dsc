@@ -80,7 +80,7 @@
   # MyApps/ShowMSDM/ShowMSDM.inf
   # MyApps/ShowECT/ShowECT.inf
   # MyApps/ShowBGRT/ShowBGRT.inf
-  # MyApps/ScreenModes/ScreenModes.inf
+  MyApps/ScreenModes/ScreenModes.inf
   MyApps/DisplayBMP/DisplayBMP.inf
   # MyApps/ShowEDID/ShowEDID.inf
   # MyApps/ShowTrEE/ShowTrEE.inf

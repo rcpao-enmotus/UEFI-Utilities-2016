@@ -22,6 +22,9 @@
 #include <Protocol/SimpleFileSystem.h>
 #include <Protocol/GraphicsOutput.h>
 
+#include "Image.h"
+
+
 typedef struct {
     CHAR8  CharB;
     CHAR8  CharM;
@@ -74,6 +77,7 @@ AsciiToUnicodeSize( CHAR8 *String,
 }
 
 
+#if 0
 EFI_STATUS
 DisplayImage( EFI_GRAPHICS_OUTPUT_PROTOCOL *Gop, 
               EFI_HANDLE *BmpBuffer)
@@ -123,6 +127,7 @@ DisplayImage( EFI_GRAPHICS_OUTPUT_PROTOCOL *Gop,
 
     return Status;
 }
+#endif
 
 
 //
@@ -325,7 +330,47 @@ ShellAppMain(UINTN Argc, CHAR16 **Argv)
     }
 #endif
         
-    DisplayImage(Gop, FileBuffer);
+    //DisplayImage(Gop, FileBuffer);
+
+{
+ EFI_GRAPHICS_OUTPUT_BLT_PIXEL *mBlt;
+ UINTN BltSize;
+ UINTN mHeight;
+ UINTN mWidth;
+ UINTN CoordinateX;
+ UINTN CoordinateY;
+
+ Status = ConvertBmpToGopBlt(
+            FileBuffer,
+            FileSize,
+            (VOID **)&mBlt,
+            &BltSize,
+            &mHeight,
+            &mWidth
+            );
+  if (EFI_ERROR(Status)) {
+    //free(FileBuffer);
+  }
+  
+  CoordinateX = (Gop->Mode->Info->HorizontalResolution / 2) - (mWidth / 2);
+  CoordinateY = (Gop->Mode->Info->VerticalResolution / 2) - (mHeight / 2);
+
+  //DisplayImageAt((UINTN)CoordinateX, (UINTN)CoordinateY);
+  Gop->Blt(
+                     Gop,
+                     mBlt,
+                     EfiBltBufferToVideo,
+                     0,
+                     0,
+                     CoordinateX,
+                     CoordinateY,
+                     mWidth,
+                     mHeight,
+                     mWidth * sizeof(EFI_GRAPHICS_OUTPUT_BLT_PIXEL)
+                     );
+
+}
+
 
 #if 0
     // reset screen to original mode
